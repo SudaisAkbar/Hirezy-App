@@ -4,10 +4,10 @@ import streamlit as st
 class Database:
     def __init__(self):
         # Use Streamlit secrets for credentials instead of hardcoded values
-       self.host = st.secrets["postgres"]["db.uciixtabnpxfunlleass.supabase.co"]
-       self.database = st.secrets["postgres"]["postgres"]
-       self.user = st.secrets["postgres"]["postgres"]
-       self.password = st.secrets["postgres"]["tyF3S$#3kxEjf3+"]
+      self.host = st.secrets["postgres"]["host"]
+      self.database = st.secrets["postgres"]["database"]
+      self.user = st.secrets["postgres"]["user"]
+      self.password = st.secrets["postgres"]["password"]
 
     def connect(self):
         return psycopg2.connect(
